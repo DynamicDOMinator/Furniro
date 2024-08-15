@@ -79,8 +79,6 @@ function renderWishList() {
           <div class="w-full h-full flex flex-col justify-center items-center">
             <button class="bg-white addcart text-warning-600 font-semibold px-3 py-2 md:px-16 md:py-4" onclick="addToCart(${cart.id})">Add to cart</button>
             <div class="flex w-full justify-center items-center gap-2 md:gap-3 mt-5">
-              <img class="cursor-pointer md:w-5 w-3" src="./imges/share.png" alt="share">
-              <p class="text-white">Share</p>
             </div>
           </div>
         </div>
