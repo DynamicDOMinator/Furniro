@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- link google font  -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- aos animation link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- link css file  -->
+    <link rel="stylesheet" href="./output.css">
+    <title>Checkout</title>
+</head>
+
+<body>
+
+    <style>
+        /* For Webkit browsers (Chrome, Safari) */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+            /* Hides the scrollbar */
+        }
+
+        /* For Firefox */
+        .no-scrollbar {
+            scrollbar-width: none;
+            /* Hides the scrollbar */
+        }
+
+        /* For Edge */
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            /* Hides the scrollbar */
+        }
+    </style>
+    <!-- Main navigation container -->
+    <nav
+        class="flex-no-wrap fixed z-20 flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <!-- Hamburger button for mobile view -->
+            <button
+                class="block menu-icon border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent1"
+                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Hamburger icon -->
+                <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </button>
+
+            <!-- Collapsible navigation container -->
+            <div class="!visible  hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+                id="navbarSupportedContent1" data-twe-collapse-item>
+                <!-- Logo -->
+                <div class="flex flex-row-reverse items-center lg:ml-7 justify-center ">
+                    <p class="text-black text-4xl font-montserrat font-bold pl-1.5">Furniro</p>
+                    <img src="./imges/Meubel House_Logos-05.png" alt="">
+                </div>
+                <!-- Left navigation links -->
+                <ul class="list-style-none lg:gap-16 mx-auto flex flex-col ps-0 lg:flex-row" data-twe-navbar-nav-ref>
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <!-- Dashboard link -->
+                        <a class="text-black text-xl transition  font-poppins font-semibold duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="index.html" data-twe-nav-link-ref>Home</a>
+                    </li>
+                    <!-- Team link -->
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-black  text-xl shop-page  transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="#" data-twe-nav-link-ref>Shop</a>
+                    </li>
+
+                    <!-- shop link  -->
+
+                    <li class="mb-4 lg:mb-0 text-xl lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-black transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="./about.html" data-twe-nav-link-ref>About</a>
+                    </li>
+
+                    <!-- Projects link -->
+                    <li class="mb-4 lg:mb-0 text-xl lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-black transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="./contact.html" data-twe-nav-link-ref>Contact</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+
+            <!-- Right elements -->
+            <div class="relative gap-7 lg:gap-14 mr-4 lg:mr-28 flex items-center">
+                
+                <!-- Second dropdown container -->
+                <div class="relative px-2 py-5">
+                    <!-- heart-icontrigger -->
+                    <a href="./wishList.html"> <img class="heart-icon cursor-pointer" src="./imges/Vector2.png" alt=""></a>
+                    <div class="absolute countWish hidden bg-red-500 px-2 rounded-xl top-0 right-0">
+                        <p class="count-wish text-white"></p>
+                    </div>
+                </div>
+
+                <div class="relative  px-2 py-5">
+                    <!-- cart-icon -->
+                    <img class="cart-icon cursor-pointer" src="./imges/Vector3.png" alt="">
+                    <div class="absolute countItems hidden bg-red-500 px-2 rounded-xl top-0 right-0">
+                        <p class="count-num text-white"></p>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- Right elements -->
+
+        </div>
+
+    </nav>
+    <div
+        class="fixed z-20 cart-list bg-warning-50 px-5 rounded-xl py-6  md:h-[90vh] right-6 lg:top-20 md:top-16 top-16 md:w-[400px] w-[75vw] h-[80vh] hidden animate__animated">
+        <div class="flex items-center justify-between">
+            <p class="font-semibold text-2xl font-poppins">Shopping Cart</p>
+            <img class="close-icon cursor-pointer" src="./imges/Group.png" alt="delete-icon">
+        </div>
+        <hr class="mt-5 w-[70%] mr-auto">
+        <!-- Add your cart items here -->
+        <div class="w-full cartShop overflow-y-scroll h-[70%] mt-3 no-scrollbar">
+        </div>
+        <div class="total mt-5">
+            <div class="flex justify-evenly items-center">
+                <p class="text-xl">Subtotal:</p>
+                <p class="text-base price text-amber-600 font-semibold">0</p>
+            </div>
+        </div>
+        <hr class="mt-2">
+        <div class="flex justify-evenly gap-3 mt-2">
+            <button class="border-2 border-black px-8 py-1 rounded-3xl "><a href="./cart.html">Cart</a></button>
+            <button class="border-2 border-black px-6 py-1 rounded-3xl ">Checkout</button>
+        </div>
+    </div>
+
+
+    <div
+        class="bg-[url('./imges/shop-bg.png')] md:bg-fixed bg-left-bottom flex justify-center items-center bg-cover bg-no-repeat w-[100%] h-[350px]">
+
+        <div class="flex gap-5 mt-20 flex-col justify-center items-center">
+            <img src="./imges/Meubel House_Logos-05.png" alt="logo.png">
+            <p class="text-6xl ">Checkout</p>
+            <div class="flex gap-3 items-center justify-center">
+                <button class="font-semibold text-xl cursor-pointer" onclick="window.location.href='index.html'">Home
+                    &#10217 </button>
+                <button class="font-normal text-lg cursor-default">Checkout</button>
+            </div>
+
+        </div>
+    </div>
+
+
+ <!-- checkout form  -->
+<div class="max-w-6xl mx-auto py-10 mt-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white p-8 shadow-lg rounded-lg">
+        <!-- Billing Details -->
+        <div>
+            <h2 class="text-2xl font-semibold mb-6">Billing details</h2>
+            <form id="billing-form">
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label for="first-name" class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input type="text" id="first-name" name="first-name"
+                            class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                    <div>
+                        <label for="last-name" class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input type="text" id="last-name" name="last-name"
+                            class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                    </div>
+                </div>
+
+                <div class="mb-4">
+                    <label for="company-name" class="block text-sm font-medium text-gray-700">Company Name
+                        (Optional)</label>
+                    <input type="text" id="company-name" name="company-name"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md">
+                </div>
+
+                <div class="mb-4">
+                    <label for="country" class="block text-sm font-medium text-gray-700">Country / Region</label>
+                    <select id="country" name="country" class="mt-1 block w-full p-2 border border-gray-300 rounded-md"
+                        required>
+                        <option value="">Select a country</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="United States">United States</option>
+                        <option value="Canada">Canada</option>
+                        <option value="United Kingdom">United Kingdom</option>
+                        <option value="Australia">Australia</option>
+                        <option value="India">India</option>
+                        <option value="Germany">Germany</option>
+                        <option value="France">France</option>
+                        <option value="Japan">Japan</option>
+                        <option value="Egypt">Egypt</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="street-address" class="block text-sm font-medium text-gray-700">Street address</label>
+                    <input type="text" id="street-address" name="street-address"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="city" class="block text-sm font-medium text-gray-700">Town / City</label>
+                    <input type="text" id="city" name="city"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="province" class="block text-sm font-medium text-gray-700">Province</label>
+                    <select id="province" name="province"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                        <option value="">Select a province</option>
+                        <option value="Western Province">Western Province</option>
+                        <option value="Central Province">Central Province</option>
+                        <option value="Southern Province">Southern Province</option>
+                        <option value="Northern Province">Northern Province</option>
+                        <option value="Eastern Province">Eastern Province</option>
+                        <option value="North Western Province">North Western Province</option>
+                        <option value="North Central Province">North Central Province</option>
+                        <option value="Uva Province">Uva Province</option>
+                        <option value="Sabaragamuwa Province">Sabaragamuwa Province</option>
+                        <option value="Cairo">Cairo</option>
+                        
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="zip" class="block text-sm font-medium text-gray-700">ZIP code</label>
+                    <input type="text" id="zip" name="zip"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md" pattern="[0-9]{5}"
+                        title="Please enter a valid 5-digit ZIP code" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="phone" class="block text-sm font-medium text-gray-700">Phone</label>
+                    <input type="tel" id="phone" name="phone"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md" pattern="^\d{10}$"
+                        title="Please enter a valid 10-digit phone number" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
+                    <input type="email" id="email" name="email"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="additional-info" class="block text-sm font-medium text-gray-700">Additional
+                        information</label>
+                    <textarea id="additional-info" name="additional-info" rows="3"
+                        class="mt-1 block w-full p-2 border border-gray-300 rounded-md"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Order Summary -->
+        <div>
+            <h2 class="text-2xl font-semibold mb-6">Product</h2>
+        <div class="mb-4">
+            <div class="flex justify-between">
+                <span id="product-name">Product Name x 1</span>
+            </div>
+        </div>
+        <div class="flex justify-between mb-4">
+            <span>Subtotal</span>
+            <span id="subtotal" class="subtotal">Rs. 0.00</span>
+        </div>
+        <div class="flex justify-between text-xl font-semibold mb-4">
+            <span>Total</span>
+            <span id="total">Rs. 0.00</span>
+        </div>
+
+
+            <!-- Payment Methods -->
+            <div class="mb-4">
+                <div class="space-y-4">
+                    <div>
+                        <input type="radio" id="direct-bank" name="payment-method" class="mr-2" required>
+                        <label for="direct-bank" class="text-gray-700 font-medium">Direct Bank Transfer</label>
+                        <p class="text-sm text-gray-600">Make your payment directly into our bank account. Please use
+                            your Order ID as the payment reference. Your order will not be shipped until the funds have
+                            cleared in our account.</p>
+                    </div>
+                    <div>
+                        <input type="radio" id="cash-on-delivery" name="payment-method" class="mr-2" required>
+                        <label for="cash-on-delivery" class="text-gray-700 font-medium">Cash On Delivery</label>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-sm text-gray-600 mb-4">Your personal data will be used to support your experience throughout
+                this website, to manage access to your account, and for other purposes described in our <a href="#"
+                    class="text-blue-600">privacy policy</a>.</p>
+
+            <button type="submit" form="billing-form"
+                class="w-full bg-blue-600 placeOrder text-white py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50">Place
+                order</button>
+        </div>
+    </div>
+</div>
+
+<div class="flex md:justify-evenly py-10 flex-col md:flex-row justify-center gap-8 pl-4  md:py-20 bg-warning-100">
+
+<div class="flex items-center gap-2 md:items-start lg:items-center">
+    <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge1.png" alt="">
+    <div class="">
+        <p class="font-semibold">High Quality</p>
+        <p class="text-gray-600">crafted from top materials</p>
+    </div>
+</div>
+
+<div class="flex items-center gap-2 md:items-start lg:items-center">
+    <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge 2.png" alt="">
+    <div class="">
+        <p class="font-semibold">Warranty Protection</p>
+        <p class="text-gray-600">Over 2 years</p>
+    </div>
+</div>
+
+<div class="flex items-center gap-2 md:items-start lg:items-center">
+    <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge 2 .png" alt="">
+    <div class="">
+        <p class="font-semibold">Free Shipping</p>
+        <p class="text-gray-600">Order over 150 $</p>
+    </div>
+</div>
+<div class="flex items-center md:items-start lg:items-center gap-2 ">
+    <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge 3 .png" alt="">
+    <div class="">
+        <p class="font-semibold">24 / 7 Support</p>
+        <p class="text-gray-600">Dedicated support</p>
+    </div>
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<footer class="bg-white py-8">
+    <hr>
+    <div class="container mx-auto py-10 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ">
+            <!-- Logo and Address -->
+            <div>
+                <h2 class="font-bold text-xl mb-4 ">Funiro.</h2>
+                <p class="text-gray-600 pt-5">400 University Drive Suite 200 Coral Gables, <br> FL 33134 USA</p>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Links</h3>
+                <ul class="space-y-2 pt-5">
+                    <li><a href="./index.html" class="text-gray-600 hover:text-gray-800">Home</a></li>
+                    <li><a href="./cart.html" class="text-gray-600 hover:text-gray-800">Shop</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">About</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Help</h3>
+                <ul class="space-y-2 pt-5">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Payment Options</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Returns</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Newsletter</h3>
+                <div class="flex space-x-10 ">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="border-b-2 border-black px-4 py-2 w-full">
+                    <button class=" text-black px-4 py-2 border-b-2 border-black">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./products.js"></script>
+    <script src="./checkout.js"></script>
+    <script type="text/javascript" src="../node_modules/tw-elements/js/tw-elements.umd.min.js"></script>

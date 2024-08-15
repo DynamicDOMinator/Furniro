@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- link google font  -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- aos animation link  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- link css file  -->
+    <link rel="stylesheet" href="./output.css">
+
+    <title>Document</title>
+</head>
+<body><style>
+    /* For Webkit browsers (Chrome, Safari) */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+        /* Hides the scrollbar */
+    }
+
+    /* For Firefox */
+    .no-scrollbar {
+        scrollbar-width: none;
+        /* Hides the scrollbar */
+    }
+
+    /* For Edge */
+    .no-scrollbar {
+        -ms-overflow-style: none;
+        /* Hides the scrollbar */
+    }
+</style>
+<!-- Main navigation container -->
+<nav
+    class="flex-no-wrap fixed z-20 flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
+    <div class="flex w-full flex-wrap items-center justify-between px-3">
+        <!-- Hamburger button for mobile view -->
+        <button
+            class="block menu-icon border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+            type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent1"
+            aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Hamburger icon -->
+            <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                    <path fill-rule="evenodd"
+                        d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                        clip-rule="evenodd" />
+                </svg>
+            </span>
+        </button>
+
+        <!-- Collapsible navigation container -->
+        <div class="!visible  hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+            id="navbarSupportedContent1" data-twe-collapse-item>
+            <!-- Logo -->
+            <div class="flex flex-row-reverse items-center lg:ml-7 justify-center ">
+                <p class="text-black text-4xl font-montserrat font-bold pl-1.5">Furniro</p>
+                <img src="./imges/Meubel House_Logos-05.png" alt="">
+            </div>
+            <!-- Left navigation links -->
+            <ul class="list-style-none lg:gap-16 mx-auto flex flex-col ps-0 lg:flex-row" data-twe-navbar-nav-ref>
+                <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                    <!-- Dashboard link -->
+                    <a class="text-black text-xl transition  font-poppins font-semibold duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                        href="index.html" data-twe-nav-link-ref>Home</a>
+                </li>
+                <!-- Team link -->
+                <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                    <a class="text-black  text-xl  transition shop-page duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                        href="#" data-twe-nav-link-ref>Shop</a> 
+                </li>
+
+                <!-- shop link  -->
+
+                <li class="mb-4 lg:mb-0 text-xl lg:pe-2" data-twe-nav-item-ref>
+                    <a class="text-black transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                        href="./about.html" data-twe-nav-link-ref>About</a>
+                </li>
+
+                <!-- Projects link -->
+                <li class="mb-4 lg:mb-0 text-xl lg:pe-2" data-twe-nav-item-ref>
+                    <a class="text-black transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                        href="./contact.html" data-twe-nav-link-ref>Contact</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+        </div>
+
+        <!-- Right elements -->
+        <div class="relative gap-7 lg:gap-14 mr-4 lg:mr-28 flex items-center">
+            <!-- log-icon -->
+         
+            <!-- Second dropdown container -->
+            <div class="relative px-2 py-5">
+                <!-- heart-icontrigger -->
+                <a href="./wishList.html"> <img class="heart-icon cursor-pointer" src="./imges/Vector2.png" alt=""></a>
+                <div class="absolute countWish hidden bg-red-500 px-2 rounded-xl top-0 right-0">
+                    <p class="count-wish text-white"></p>
+                </div>
+            </div>
+
+            <div class="relative  px-2 py-5">
+                <!-- cart-icon -->
+                <img class="cart-icon cursor-pointer" src="./imges/Vector3.png" alt="">
+                <div class="absolute countItems hidden bg-red-500 px-2 rounded-xl top-0 right-0">
+                    <p class="count-num text-white"></p>
+                </div>
+
+
+            </div>
+        </div>
+        <!-- Right elements -->
+
+    </div>
+
+</nav>
+<div
+    class="fixed z-20 cart-list bg-warning-50 px-5 rounded-xl py-6  md:h-[90vh] right-6 lg:top-20 md:top-16 top-16 md:w-[400px] w-[75vw] h-[80vh] animate__animated">
+    <div class="flex items-center justify-between">
+        <p class="font-semibold text-2xl font-poppins">Shopping Cart</p>
+        <img class="close-icon cursor-pointer" src="./imges/Group.png" alt="delete-icon">
+    </div>
+    <hr class="mt-5 w-[70%] mr-auto">
+    <!-- Add your cart items here -->
+    <div class="w-full cartShop overflow-y-scroll h-[70%] mt-3 no-scrollbar">
+    </div>
+    <div class="total mt-5">
+        <div class="flex justify-evenly items-center">
+            <p class="text-xl">Subtotal:</p>
+            <p class="text-base price text-amber-600 font-semibold">0</p>
+        </div>
+    </div>
+    <hr class="mt-2">
+    <div class="flex justify-evenly gap-3 mt-2">
+        <button class="border-2 border-black px-8 py-1 rounded-3xl goToShop ">Cart</button>
+        <button class="border-2 CheckOut border-black px-6 py-1 rounded-3xl ">Checkout</button>
+    </div>
+</div>
+
+    
+    
+    <div
+        class="bg-[url('./imges/shop-bg.png')] md:bg-fixed bg-left-bottom flex justify-center items-center bg-cover bg-no-repeat w-[100%] h-[350px]">
+    
+        <div class="flex gap-5 mt-20 flex-col justify-center items-center">
+            <img src="./imges/Meubel House_Logos-05.png" alt="logo.png">
+            <p class="text-6xl ">Wish Page</p>
+            <div class="flex gap-3 items-center justify-center">
+                <button class="font-semibold text-xl cursor-pointer" onclick="window.location.href='index.html'">Home
+                    &#10217 </button>
+                <button class="font-normal text-lg  cursor-default">Wish list</button>
+            </div>
+    
+        </div>
+    </div>
+    </div>
+
+
+<!-- favourite items  -->
+
+
+<div class="mt-10">
+<p class="mx-auto py-2 font-bold text-4xl w-[360px]">
+    Your <span class="text-red-500">  Favourite </span> Items
+</p>
+</div>
+
+<div class="wishlist-container flex flex-wrap py-10 px-10 gap-4">
+    <!-- JavaScript will dynamically add items here -->
+</div>
+
+
+
+
+<div class="flex md:justify-evenly mt-9 py-10 flex-col md:flex-row justify-center gap-8 pl-4  bg-warning-100">
+
+    <div class="flex items-center gap-2 md:items-start lg:items-center">
+        <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge1.png" alt="">
+        <div class="">
+            <p class="font-semibold">High Quality</p>
+            <p class="text-gray-600">crafted from top materials</p>
+        </div>
+    </div>
+
+    <div class="flex items-center gap-2 md:items-start lg:items-center">
+        <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge 2.png" alt="">
+        <div class="">
+            <p class="font-semibold">Warranty Protection</p>
+            <p class="text-gray-600">Over 2 years</p>
+        </div>
+    </div>
+
+    <div class="flex items-center gap-2 md:items-start lg:items-center">
+        <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge 2 .png" alt="">
+        <div class="">
+            <p class="font-semibold">Free Shipping</p>
+            <p class="text-gray-600">Order over 150 $</p>
+        </div>
+    </div>
+    <div class="flex items-center md:items-start lg:items-center gap-2 ">
+        <img class="md:w-[35px] lg:w-[70px]" src="./imges/badge 3 .png" alt="">
+        <div class="">
+            <p class="font-semibold">24 / 7 Support</p>
+            <p class="text-gray-600">Dedicated support</p>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<footer class="bg-white py-8">
+    <hr>
+    <div class="container mx-auto py-10 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ">
+            <!-- Logo and Address -->
+            <div>
+                <h2 class="font-bold text-xl mb-4 ">Funiro.</h2>
+                <p class="text-gray-600 pt-5">400 University Drive Suite 200 Coral Gables, <br> FL 33134 USA</p>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Links</h3>
+                <ul class="space-y-2 pt-5">
+                    <li><a href="./index.html" class="text-gray-600 hover:text-gray-800">Home</a></li>
+                    <li><a href="./cart.html" class="text-gray-600 hover:text-gray-800">Shop</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">About</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Help</h3>
+                <ul class="space-y-2 pt-5">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Payment Options</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Returns</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Newsletter</h3>
+                <div class="flex space-x-10 ">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="border-b-2 border-black px-4 py-2 w-full">
+                    <button class=" text-black px-4 py-2 border-b-2 border-black">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+<script src="./products.js"></script>
+<script src="./wichList.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript" src="../node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+</html>

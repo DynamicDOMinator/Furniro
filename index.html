@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- link google font  -->
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dongle&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+        <!-- aos animation link  -->
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!-- link css file  -->
+    <link rel="stylesheet" href="./output.css">
+    <title>Document</title>
+    
+</head>
+<body class="h-[3000px]">
+    <style>
+        /* For Webkit browsers (Chrome, Safari) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none; /* Hides the scrollbar */
+}
+
+/* For Firefox */
+.no-scrollbar {
+  scrollbar-width: none; /* Hides the scrollbar */
+}
+
+/* For Edge */
+.no-scrollbar {
+  -ms-overflow-style: none; /* Hides the scrollbar */
+}
+
+    </style>
+    <!-- Main navigation container -->
+    <nav
+        class="flex-no-wrap fixed z-20 flex w-full items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:flex-wrap lg:justify-start lg:py-4">
+        <div class="flex w-full flex-wrap items-center justify-between px-3">
+            <!-- Hamburger button for mobile view -->
+            <button
+                class="block menu-icon border-0 bg-transparent px-2 text-black/50 hover:no-underline hover:shadow-none focus:no-underline focus:shadow-none focus:outline-none focus:ring-0 dark:text-neutral-200 lg:hidden"
+                type="button" data-twe-collapse-init data-twe-target="#navbarSupportedContent1"
+                aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation">
+                <!-- Hamburger icon -->
+                <span class="[&>svg]:w-7 [&>svg]:stroke-black/50 dark:[&>svg]:stroke-neutral-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </span>
+            </button>
+    
+            <!-- Collapsible navigation container -->
+            <div class="!visible  hidden flex-grow basis-[100%] items-center lg:!flex lg:basis-auto"
+                id="navbarSupportedContent1" data-twe-collapse-item>
+                <!-- Logo -->
+                <div class="flex flex-row-reverse items-center lg:ml-7 justify-center ">
+                    <p class="text-black text-4xl font-montserrat font-bold pl-1.5">Furniro</p>
+                    <img src="./imges/Meubel House_Logos-05.png" alt="">
+                </div>
+                <!-- Left navigation links -->
+                <ul class="list-style-none lg:gap-16 mx-auto flex flex-col ps-0 lg:flex-row" data-twe-navbar-nav-ref>
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <!-- Dashboard link -->
+                        <a class="text-black text-xl transition  font-poppins font-semibold duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="index.html" data-twe-nav-link-ref>Home</a>
+                    </li>
+                    <!-- Team link -->
+                    <li class="mb-4 lg:mb-0 lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-black shop-page  text-xl  transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="#" data-twe-nav-link-ref>Shop</a>
+                    </li>
+                    
+                    <!-- shop link  -->
+
+                    <li class="mb-4 lg:mb-0 text-xl lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-black transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="./about.html" data-twe-nav-link-ref>About</a>
+                    </li>
+
+                    <!-- Projects link -->
+                    <li class="mb-4 lg:mb-0 text-xl lg:pe-2" data-twe-nav-item-ref>
+                        <a class="text-black transition duration-200 font-poppins font-semibold  hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 lg:px-2"
+                            href="./contact.html" data-twe-nav-link-ref>Contact</a>
+                    </li>
+                </ul>
+                <!-- Left links -->
+            </div>
+    
+            <!-- Right elements -->
+            <div class="relative gap-7 lg:gap-14 mr-4 lg:mr-28 flex items-center">
+                <!-- log-icon -->
+              
+                <!-- Second dropdown container -->
+                <div class="relative px-2 py-5">
+                    <!-- heart-icontrigger -->
+                    <a href="./wishList.html"> <img class="heart-icon cursor-pointer" src="./imges/Vector2.png" alt=""></a>
+                    <div class="absolute countWish hidden bg-red-500 px-2 rounded-xl top-0 right-0">
+                        <p class="count-wish text-white"></p>
+                    </div>
+                </div>
+                
+                <div class="relative  px-2 py-5" >
+                    <!-- cart-icon -->
+                    <img class="cart-icon cursor-pointer" src="./imges/Vector3.png" alt="">
+                    <div class="absolute countItems hidden bg-red-500 px-2 rounded-xl top-0 right-0">
+                        <p class="count-num text-white"></p>
+                    </div>
+
+                    
+                </div>
+            </div>
+            <!-- Right elements -->
+            
+        </div>
+        
+    </nav>
+<div
+    class="fixed z-20 cart-list bg-warning-50 px-5 rounded-xl py-6  md:h-[90vh] right-6 lg:top-20 md:top-16 top-16 md:w-[400px] w-[75vw] h-[80vh] hidden animate__animated">
+    <div class="flex items-center justify-between">
+        <p class="font-semibold text-2xl font-poppins">Shopping Cart</p>
+        <img class="close-icon cursor-pointer" src="./imges/Group.png" alt="delete-icon">
+    </div>
+    <hr class="mt-5 w-[70%] mr-auto">
+    <!-- Add your cart items here -->
+    <div class="w-full cartShop overflow-y-scroll h-[70%] mt-3 no-scrollbar">
+                                </div>
+<div class="total mt-5">
+    <div class="flex justify-evenly items-center">
+        <p class="text-xl">Subtotal:</p>
+        <p class="text-base price text-amber-600 font-semibold">0</p>
+    </div>
+</div>
+        <hr class="mt-2">
+        <div class="flex justify-evenly gap-3 mt-2">
+            <button class="border-2 border-black px-8 py-1 rounded-3xl goToShop ">Cart</button>
+            <button class="border-2 CheckOut border-black px-6 py-1 rounded-3xl ">Checkout</button>
+        </div>
+</div>
+
+    
+<!-- first section start  -->
+
+<div class="bg-[url('./imges/bg-main.png')] md:bg-fixed bg-top bg-cover flex justify-end items-center  w-[100%] h-[100vh]" >
+<div  class="  py-9 lg:w-[600px] px-10 lg:h-[430px]  md:w-[400px] w-[280px]  bg-warning-100 lg:mr-28 mg:mr-14 mr-5" >
+<p class="font-semibold text-base font-poppins tracking-widest">New Arrival</p>
+<p class="font-poppins pt-5 text-yellow-600 font-bold text-2xl lg:text-6xl"> Discover Our <br> New Collection</p>
+<p class=" pt-5 text-base">Crafting Beautiful, Functional Spaces with Exceptional Comfort and Timeless Elegance for Every Home</p>
+<button class="bg-yellow-600 buynow px-10 py-6 mt-10 md:px-16 md:py-7 text-white font-bold font-poppins  ">BUY NOW</button>
+</div>
+</div>
+
+<!-- end of the first section  -->
+
+
+<!-- second section  -->
+<div class="mt-16">
+<p class="text-center font-bold font-poppins text-3xl" >Browse The Range</p>
+<p class="text-center mt-3 ">Transforming Spaces with Stylish Comfort and Timeless Elegance</p>
+<div class="md:flex md:gap-7 px-10  md:justify-center mt-14">
+<div>
+    <img class="rounded-lg mx-auto" src="./imges/image 100.png" alt="">
+    <p class="text-center mt-8 font-bold font-poppins md:text-xl">Bedroom</p>
+</div>
+<div class="mt-10 md:mt-0 ">
+    <img class="rounded-lg mx-auto"  src="./imges/image 101.png" alt="">
+    <p class="text-center mt-8 font-bold font-poppins md:text-xl">Living</p>
+</div>
+<div class="mt-10 md:mt-0 ">
+    <img class="rounded-lg mx-auto"  src="./imges/image 106.png" alt="">
+    <p class="text-center mt-8 font-bold font-poppins md:text-xl">Dining</p>
+</div>
+</div>
+</div>
+
+
+<!-- products section  -->
+
+<div class="mt-20 product-sec">
+    <p class="font-bold font-poppins md:text-5xl text-3xl text-center">Our Products</p>
+<div class="products mt-10 md:px-8 px-3 flex flex-wrap justify-center gap-6 ">
+</div>
+
+<div class="text-center py-10">
+    <button class="text-2xl show-more text-yellow-600 border-2 border-yellow-500 bg-transparent  font-semibold px-12 py-1">Show More</button>
+</div>
+</div>
+
+
+
+<div class="flex relative bg-amber-50 py-7">
+    <div class="md:w-[30%] w-[50%] px-7 items-start justify-center flex flex-col">
+        <p class="md:text-4xl text-2xl font-bold">
+            50+ Beautiful rooms <br>
+            inspiration
+        </p>
+        <p class="text-base  text-gray-500">
+            Our designer already made a lot of beautiful prototypes of rooms that inspire you
+        </p>
+    </div>
+    <div class="md:w-[70%] w-[50%] relative px-4">
+        <!-- Slider main container -->
+        <div class="swiper w-full h-[500px]">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide relative">
+                    <img class="w-full h-[450px] object-cover" src="./imges/slide1.png" alt="slide">
+                    <div class="bg-gray-50/50 absolute bottom-20 left-4 px-8 py-4">
+                        <p>
+                            01
+                            Bed Room
+                        </p>
+                        <p class="font-bold md:text-xl text-base">Inner Peace</p>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-[450px] object-cover" src="./imges/slide2.png" alt="slide">
+                    <div class="bg-gray-50/50 absolute bottom-20 left-4 px-8 py-4">
+                        <p>
+                            02
+                            kitchen
+                        </p>
+                        <p class="font-bold md:text-xl text-base">Inner Peace</p>
+                    </div>
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-[450px] object-cover" src="./imges/Rectangle 43.png" alt="slide">
+                    <div class="bg-gray-50/50 absolute bottom-20 left-4 px-8 py-4">
+                        <p>
+                            03
+                            Living Room
+                        </p>
+                        <p class="font-bold md:text-xl text-base">Inner Peace</p>
+                    </div>
+                    
+                </div>
+                <div class="swiper-slide relative">
+                    <img class="w-full h-[450px] object-cover" src="./imges/Rectangle 40.png" alt="slide">
+                    <div class="bg-gray-50/50 absolute bottom-20 left-4 px-8 py-4">
+                        <p>
+                            04
+                            Bed Room
+                        </p>
+                        <p class="font-bold md:text-xl text-base">Inner Peace</p>
+                    </div>
+                </div>
+            </div>
+            <!-- If we need pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mx-auto px-10 py-8">
+    <h1 class="text-2xl text-center mb-8">Share your setup with</h1>
+    <p class="text-gray-800 text-center text-3xl md:text-5xl font-bold">#FuniroFurniture</p>
+
+    <!-- Flexbox container -->
+    <div class="flex flex-wrap justify-center gap-10 mt-10 ">
+<!-- Second Column -->
+        <div class="flex">
+            <img src="./imges/Rectangle 40.png" alt="Furniture Image 4" class="w-[100%] object-cover rounded-lg mx-auto">
+        </div>
+        <!-- First Column -->
+        <div class="flex flex-col mr-auto lg:mr-0">
+            <img src="./imges/Rectangle 45.png" alt="Furniture Image 6" class="w-[100%] object-cover rounded-lg mb-4 mx-auto">
+            <img src="./imges/Rectangle 41.png" alt="Furniture Image 7" class="w-[100%] object-cover rounded-lg mx-auto">
+        </div>
+
+        
+
+        <!-- Third Column -->
+        <div class="flex flex-col md:w-[350px] ">
+            <img src="./imges/tall.png" alt="Furniture Image 5"
+                class="w-[100%] h-full object-cover rounded-lg mx-auto">
+        </div>
+
+        <!-- Fourth Column -->
+        <div class="flex flex-col ml-auto lg:ml-0">
+            <img src="./imges/Rectangle 43.png" alt="Furniture Image 6"
+                class="w-[80%] object-cover rounded-lg mb-4 mx-auto">
+            <img src="./imges/Rectangle 44.png" alt="Furniture Image 7" class="w-[80%] object-cover rounded-lg mx-auto">
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="bg-white py-8">
+    <hr>
+    <div class="container mx-auto py-10 lg:px-20">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 ">
+            <!-- Logo and Address -->
+            <div>
+                <h2 class="font-bold text-xl mb-4 ">Funiro.</h2>
+                <p class="text-gray-600 pt-5">400 University Drive Suite 200 Coral Gables, <br> FL 33134 USA</p>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Links</h3>
+                <ul class="space-y-2 pt-5">
+                    <li><a href="./index.html" class="text-gray-600 hover:text-gray-800">Home</a></li>
+                    <li><a href="./cart.html" class="text-gray-600 hover:text-gray-800">Shop</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">About</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Help -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Help</h3>
+                <ul class="space-y-2 pt-5">
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Payment Options</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Returns</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-gray-800">Privacy Policies</a></li>
+                </ul>
+            </div>
+
+            <!-- Newsletter -->
+            <div>
+                <h3 class="font-semibold text-gray-700 mb-4">Newsletter</h3>
+                <div class="flex space-x-10 ">
+                    <input type="email" placeholder="Enter Your Email Address"
+                        class="border-b-2 border-black px-4 py-2 w-full">
+                    <button class=" text-black px-4 py-2 border-b-2 border-black">SUBSCRIBE</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+
+
+
+
+
+<!-- sweetaleart link  -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="./products.js"></script>
+<script src="app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="text/javascript" src="../node_modules/tw-elements/js/tw-elements.umd.min.js"></script>
+</body>
+</html>
