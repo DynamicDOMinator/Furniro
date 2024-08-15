@@ -38,29 +38,7 @@ closeIcon.addEventListener("click", () => {
   }, 500); // Match the duration of the animation
 });
 
-menuIcon.addEventListener("click", () => {
-  const heartDisplay = getComputedStyle(heartIcon).display;
-  const logDisplay = getComputedStyle(logIcon).display;
-  const cartDisplay = getComputedStyle(cartIcon).display;
-  const countDisplay = getComputedStyle(countItem).display;
 
-  if (
-    heartDisplay === "block" &&
-    logDisplay === "block" &&
-    cartDisplay === "block" &&
-    countDisplay === "block"
-  ) {
-    heartIcon.style.display = "none";
-    logIcon.style.display = "none";
-    cartIcon.style.display = "none";
-    countItem.style.display = "none";
-  } else {
-    heartIcon.style.display = "block";
-    logIcon.style.display = "block";
-    cartIcon.style.display = "block";
-    countItem.style.display = "block";
-  }
-});
 function updateCart() {
   const cart = JSON.parse(localStorage.getItem("CART")) || [];
   cartShop.innerHTML = "";
